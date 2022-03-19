@@ -6,6 +6,10 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Iosevka Nerd Font Mono:size=11:antialias=true:autohint=true";
+static char *font2[] = {
+  "Noto Color Emoji:size=5:antialias=true:autohint=true"
+};
+
 static int borderpx = 16;
 
 /*
@@ -117,8 +121,8 @@ static const char *colorname[] = {
   [2] = "#9ece6a", /* green   */
   [3] = "#e0af68", /* yellow  */
   [4] = "#7aa2f7", /* blue    */
-  [5] = "#9a7ecc", /* magenta */
-  [6] = "#4abaaf", /* cyan    */
+  [5] = "#bb9af7", /* magenta */
+  [6] = "#7dcfff", /* cyan    */
   [7] = "#a9b1d6", /* white   */
 
   /* 8 bright colors */
@@ -127,8 +131,8 @@ static const char *colorname[] = {
   [10] = "#9ece6a", /* green   */
   [11] = "#e0af68", /* yellow  */
   [12] = "#7aa2f7", /* blue    */
-  [13] = "#9a7ecc", /* magenta */
-  [14] = "#4abaaf", /* cyan    */
+  [13] = "#bb9af7", /* magenta */
+  [14] = "#7dcfff", /* cyan    */
   [15] = "#c0caf5", /* white   */
 
   /* special colors */
@@ -227,11 +231,13 @@ static Shortcut shortcuts[] = {
   { ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
   { ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
   { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-  { MODKEY,               XK_c,           clipcopy,       {.i =  0} },
-  { MODKEY,               XK_v,           clippaste,      {.i =  0} },
   { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
   { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
   { TERMMOD,              XK_Return,      newterm,        {.i =  0} },
+  { TERMMOD,              XK_c,           clipcopy,       {.i =  0} },
+  { TERMMOD,              XK_v,           clippaste,      {.i =  0} },
+  { MODKEY,               XK_c,           clipcopy,       {.i =  0} },
+  { MODKEY,               XK_v,           clippaste,      {.i =  0} },
   { MODKEY,               XK_Up,          kscrollup,      {.i =  1} },
   { MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
   { MODKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
